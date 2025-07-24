@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Portal</title>
+    <link rel='stylesheet' href="./assets/commonStyles.css">
+    <script src="./assets/script.js"></script>
+    <style>
+        :root {
+            ---bg: #2563EB;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f9fafb;
+            color: #111827;
+            line-height: 1.6;
+        }
+
+        main {
+            padding: 40px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background-color: #ffffff;
+            /* box-shadow: 10px 9px 9px  #111827; */
+            border: 3px solid var(---bg);
+        }
+
+        th,
+        td {
+            border: 2px solid #d1d5db;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #2563eb;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f3f4f6;
+        }
+
+        ul {
+            margin-left: 10px;
+        }
+
+
+
+        .assign-table {
+            border: solid blue;
+            box-shadow: 10px 9px 9px #111827;
+        }
+
+        .box {
+            max-width: auto;
+            margin: auto;
+            border: 9px solid #2563eb;
+        }
+    </style>
+
+</head>
+
+<body class="box">
+
+    <header>
+        <h1 class="hd">Student Portal</h1>
+
+        <button onclick="menuBar()"><img src="https://img.icons8.com/3d-fluency/30/menu.png" alt="menu"></button>
+
+        <nav id="menu">
+            <a href="/dashboard" >Home</a>
+            <a href="/profile" >View Profile</a>
+            <a href="/logout" >Logout</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="basic">
+            <p><b>Name :</b> {{fullName}}</p>
+            <p><b>Roll Number :</b> {{rollNo}}</p>
+        </div>
+
+        <div>
+            <h2>Courses</h2>
+            <p>You are enrolled in these courses:</p>
+            <ul>
+                <li>courses-1</li>
+                <li>courses-2</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Attendance</h2>
+            <table class="attend-table">
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Course</th>
+                        <th>Present</th>
+                        <th>Absent</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>courses-1</td>
+                        <td>40</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>courses-2</td>
+                        <td>23</td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div>
+            <h2>Exam</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Exam</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>JavaScript</td>
+                        <td>64</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div>
+            <h2>Assignment</h2>
+            <div>
+                <!-- <h3>Courses-1 Assignment</h3> -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Assignment</th>
+                            <th>Given Date</th>
+                            <th>Deadline</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Calculator</td>
+                            <td>23-04-2005</td>
+                            <td>23-05-2006</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

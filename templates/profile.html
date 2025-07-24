@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Protol</title>
+  <link rel="stylesheet" href="./assets/commonStyles.css">
+  <script src="./assets/script.js"></script>
+
+  <style>
+    :root {
+      ---secondary: #4F46E5;
+      ---accent: #22D3EE;
+      ---surface: #FFFFFF;
+      ---text-dark: #111827;
+      ---text-light: #F1F5F9;
+    }
+
+    body {
+      margin: auto;
+      font-family: 'Inter', sans-serif;
+      background-color: var(---bg);
+      color: var(---text-dark);
+    }
+
+    main {
+      max-width: 10rem auto;
+      margin: 24px;
+      padding: 20px;
+      background-color: var(---surface);
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+
+    figure {
+      margin: 10px 0;
+    }
+
+    img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border: 2px solid var(---primary);
+      border-radius: 4px;
+    }
+
+
+    .edit {
+      display: inline-block;
+      /* margin-top: 10px; */
+      background-color: #2563eb;
+      color: white;
+      width: auto;
+      /* padding: 7px 12px; */
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /*     
+    article {
+      margin-top: 15px;
+    } */
+    p {
+      margin: 5px 1;
+    }
+
+    .head-titile {
+      background: linear-gradient(to right, var(---primary), rgb(0, 153, 255), var(---primary));
+      color: white;
+    }
+
+    .stud-pic {
+      width: 5000px;
+      border-radius: 50%;
+    }
+
+    .box {
+      max-width: auto;
+      margin: auto;
+      border: 9px solid #2563eb;
+    }
+
+    .personal-info {
+      margin-top: 20px;
+    }
+
+    .info-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .info-grid div {
+      flex: 1 1 45%;
+      background: linear-gradient(to right, white, rgba(119, 191, 204, 0.295));
+      padding: 10px 15px;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+      box-shadow: 1px 1px 1px 2px rgba(55, 109, 209, 0.664);
+    }
+
+    .stud-pic {
+      width: 5000px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+
+<body class="box">
+  <header>
+    <h1 class="hd">Student Portal</h1>
+
+    <button onclick="menuBar()"><img src="https://img.icons8.com/3d-fluency/30/menu.png" alt="menu"></button>
+
+    <nav id="menu">
+      <a href="/dashboard">Home</a>
+      <a href="/profile">View Profile</a>
+      <a href="/logout">Logout</a>
+    </nav>
+  </header>
+
+
+  <main>
+
+
+    <figure>
+      <a href="./edit.html" class="edit">Edit</a>
+      <h2>Student Picture</h2>
+      <img class="stud-pic" src="https://img.icons8.com/color//test-account.png" alt="student-image">
+    </figure>
+
+    <section class="personal-info">
+      <h2>Personal Information</h2>
+      <div class="info-grid">
+        <div><strong>Full Name:</strong> {{fullName}}</div>
+        <div><strong>Father's Name:</strong>{{fathersName}}</div>
+        <div><strong>Roll Number:</strong> {{rollNo}}</div>
+        <div><strong>Date of Birth:</strong>{{dateOfBirth}}</div>
+        <div><strong>CNIC / B-Form:</strong>{{cnicOrBForm}}</div>
+        <div><strong>Email Address:</strong> {{email}}</div>
+        <div style="max-width: 580px;"><strong>Phone Number:</strong> {{phoneNumber}}</div>
+      </div>
+    </section>
+
+    <h2>Student Data</h2>
+    <figure>
+      <h3>Matric marksheet</h3>
+      <img src="" alt="matric-marksheet">
+    </figure>
+
+    <figure>
+      <h3>Intermediate marksheet</h3>
+      <img src="" alt="intermediate-marksheet">
+    </figure>
+
+    </article>
+
+    <!-- <button src="./edit.html">edit</button>   -->
+  </main>
+
+
+</body>
+
+</html>
